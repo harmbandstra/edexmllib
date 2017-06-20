@@ -1,0 +1,26 @@
+Edexml\Types\SchoolReferentieType:
+    properties:
+        brincode:
+            expose: true
+            access_type: public_method
+            serialized_name: brincode
+            accessor:
+                getter: getBrincode
+                setter: setBrincode
+            type: string
+        dependancecode:
+            expose: true
+            access_type: public_method
+            serialized_name: dependancecode
+            accessor:
+                getter: getDependancecode
+                setter: setDependancecode
+            type: string
+        schoolkey:
+            expose: true
+            access_type: public_method
+            serialized_name: schoolkey
+            accessor:
+                getter: getSchoolkey
+                setter: setSchoolkey
+            type: string

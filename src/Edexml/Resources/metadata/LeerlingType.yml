@@ -1,0 +1,283 @@
+Edexml\Types\LeerlingType:
+    properties:
+        key:
+            expose: true
+            access_type: public_method
+            serialized_name: key
+            accessor:
+                getter: getKey
+                setter: setKey
+            xml_attribute: true
+            type: string
+        achternaam:
+            expose: true
+            access_type: public_method
+            serialized_name: achternaam
+            accessor:
+                getter: getAchternaam
+                setter: setAchternaam
+            type: string
+        voorvoegsel:
+            expose: true
+            access_type: public_method
+            serialized_name: voorvoegsel
+            accessor:
+                getter: getVoorvoegsel
+                setter: setVoorvoegsel
+            type: string
+        voornamen:
+            expose: true
+            access_type: public_method
+            serialized_name: voornamen
+            accessor:
+                getter: getVoornamen
+                setter: setVoornamen
+            type: string
+        voorletters1:
+            expose: true
+            access_type: public_method
+            serialized_name: voorletters-1
+            accessor:
+                getter: getVoorletters1
+                setter: setVoorletters1
+            type: string
+        roepnaam:
+            expose: true
+            access_type: public_method
+            serialized_name: roepnaam
+            accessor:
+                getter: getRoepnaam
+                setter: setRoepnaam
+            type: string
+        geboortedatum:
+            expose: true
+            access_type: public_method
+            serialized_name: geboortedatum
+            accessor:
+                getter: getGeboortedatum
+                setter: setGeboortedatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\Date
+        geslacht:
+            expose: true
+            access_type: public_method
+            serialized_name: geslacht
+            accessor:
+                getter: getGeslacht
+                setter: setGeslacht
+            type: integer
+        startOndwJgr3:
+            expose: true
+            access_type: public_method
+            serialized_name: start_ondw_jgr3
+            accessor:
+                getter: getStartOndwJgr3
+                setter: setStartOndwJgr3
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\Date
+        jaargroep:
+            expose: true
+            access_type: public_method
+            serialized_name: jaargroep
+            accessor:
+                getter: getJaargroep
+                setter: setJaargroep
+            type: string
+        groep:
+            expose: true
+            access_type: public_method
+            serialized_name: groep
+            accessor:
+                getter: getGroep
+                setter: setGroep
+            type: Edexml\Types\GroepReferentieType
+        samengesteldeGroepen:
+            expose: true
+            access_type: public_method
+            serialized_name: samengestelde_groepen
+            accessor:
+                getter: getSamengesteldeGroepen
+                setter: setSamengesteldeGroepen
+            type: array<Edexml\Types\GroepReferentieType>
+            xml_list:
+                inline: false
+                entry_name: samengestelde_groep
+                skip_when_empty: true
+        vestiging:
+            expose: true
+            access_type: public_method
+            serialized_name: vestiging
+            accessor:
+                getter: getVestiging
+                setter: setVestiging
+            type: Edexml\Types\VestigingReferentieType
+        gebruikersnaam:
+            expose: true
+            access_type: public_method
+            serialized_name: gebruikersnaam
+            accessor:
+                getter: getGebruikersnaam
+                setter: setGebruikersnaam
+            type: string
+        emailadres:
+            expose: true
+            access_type: public_method
+            serialized_name: emailadres
+            accessor:
+                getter: getEmailadres
+                setter: setEmailadres
+            type: string
+        fotourl:
+            expose: true
+            access_type: public_method
+            serialized_name: fotourl
+            accessor:
+                getter: getFotourl
+                setter: setFotourl
+            type: string
+        etniciteit:
+            expose: true
+            access_type: public_method
+            serialized_name: etniciteit
+            accessor:
+                getter: getEtniciteit
+                setter: setEtniciteit
+            type: string
+        land:
+            expose: true
+            access_type: public_method
+            serialized_name: land
+            accessor:
+                getter: getLand
+                setter: setLand
+            type: string
+        landVader:
+            expose: true
+            access_type: public_method
+            serialized_name: land_vader
+            accessor:
+                getter: getLandVader
+                setter: setLandVader
+            type: string
+        landMoeder:
+            expose: true
+            access_type: public_method
+            serialized_name: land_moeder
+            accessor:
+                getter: getLandMoeder
+                setter: setLandMoeder
+            type: string
+        sofinummer:
+            expose: true
+            access_type: public_method
+            serialized_name: sofinummer
+            accessor:
+                getter: getSofinummer
+                setter: setSofinummer
+            type: string
+        bsn:
+            expose: true
+            access_type: public_method
+            serialized_name: bsn
+            accessor:
+                getter: getBsn
+                setter: setBsn
+            type: string
+        onderwijsnummer:
+            expose: true
+            access_type: public_method
+            serialized_name: onderwijsnummer
+            accessor:
+                getter: getOnderwijsnummer
+                setter: setOnderwijsnummer
+            type: string
+        bsnOndwnr4:
+            expose: true
+            access_type: public_method
+            serialized_name: bsn_ondwnr-4
+            accessor:
+                getter: getBsnOndwnr4
+                setter: setBsnOndwnr4
+            type: string
+        rijksregisternummer:
+            expose: true
+            access_type: public_method
+            serialized_name: rijksregisternummer
+            accessor:
+                getter: getRijksregisternummer
+                setter: setRijksregisternummer
+            type: string
+        gewichtNieuw:
+            expose: true
+            access_type: public_method
+            serialized_name: gewicht_nieuw
+            accessor:
+                getter: getGewichtNieuw
+                setter: setGewichtNieuw
+            type: string
+        gewicht:
+            expose: true
+            access_type: public_method
+            serialized_name: gewicht
+            accessor:
+                getter: getGewicht
+                setter: setGewicht
+            type: string
+        postcodenl:
+            expose: true
+            access_type: public_method
+            serialized_name: postcodenl
+            accessor:
+                getter: getPostcodenl
+                setter: setPostcodenl
+            type: string
+        postnummerbe:
+            expose: true
+            access_type: public_method
+            serialized_name: postnummerbe
+            accessor:
+                getter: getPostnummerbe
+                setter: setPostnummerbe
+            type: string
+        postcodeoverig:
+            expose: true
+            access_type: public_method
+            serialized_name: postcodeoverig
+            accessor:
+                getter: getPostcodeoverig
+                setter: setPostcodeoverig
+            type: string
+        instroomdatum:
+            expose: true
+            access_type: public_method
+            serialized_name: instroomdatum
+            accessor:
+                getter: getInstroomdatum
+                setter: setInstroomdatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\Date
+        uitstroomdatum:
+            expose: true
+            access_type: public_method
+            serialized_name: uitstroomdatum
+            accessor:
+                getter: getUitstroomdatum
+                setter: setUitstroomdatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\Date
+        toevoegingen:
+            expose: true
+            access_type: public_method
+            serialized_name: toevoegingen
+            accessor:
+                getter: getToevoegingen
+                setter: setToevoegingen
+            type: array<Edexml\Types\ToevoegingsBlokType>
+            xml_list:
+                inline: false
+                entry_name: blok
+                skip_when_empty: true
+        mutatiedatum:
+            expose: true
+            access_type: public_method
+            serialized_name: mutatiedatum
+            accessor:
+                getter: getMutatiedatum
+                setter: setMutatiedatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\DateTime

@@ -1,0 +1,10 @@
+Edexml\Types\OpmerkingGegevensType:
+    properties:
+        opmerking:
+            expose: true
+            access_type: public_method
+            serialized_name: opmerking
+            accessor:
+                getter: getOpmerking
+                setter: setOpmerking
+            type: string

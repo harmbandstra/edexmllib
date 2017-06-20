@@ -1,0 +1,12 @@
+xsd2php:
+  namespaces:
+    '': 'Edexml\Types'
+  destinations_php:
+    'Edexml\Types': src/Edexml/Types
+  destinations_jms:
+    'Edexml\Types': src/metadata
+#  aliases: # optional
+#    'http://www.example.org/test/':
+#      MyCustomXSDType:  'MyCustomMappedPHPType'
+  naming_strategy: short
+  path_generator: psr4

@@ -1,0 +1,13 @@
+Edexml\Types\EDEXType\LeerlingenAType:
+    properties:
+        leerling:
+            expose: true
+            access_type: public_method
+            serialized_name: leerling
+            accessor:
+                getter: getLeerling
+                setter: setLeerling
+            xml_list:
+                inline: true
+                entry_name: leerling
+            type: array<Edexml\Types\LeerlingType>

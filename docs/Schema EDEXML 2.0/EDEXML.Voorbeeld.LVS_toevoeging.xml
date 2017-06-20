@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EDEX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EDEXML.elementen.lvs.xsd">
+	<school>
+		<schooljaar>2012-2013</schooljaar>
+		<brincode>12AA</brincode>
+		<schoolkey>12345</schoolkey>
+		<xsdversie>2.0</xsdversie>
+	</school>
+	<leerlingen>
+		<leerling key="0001">
+			<achternaam>Evers</achternaam>
+			<voorletters-1>TM</voorletters-1>
+			<geboortedatum>2006-08-19</geboortedatum>
+			<geslacht>1</geslacht>
+			<toevoegingen>
+				<blok xsi:type="LVSGegevensType">
+					<code>LVS</code>
+					<omschrijving>Extra leerlingkenmerken LVS per 06-2013</omschrijving>
+					<rugzakleerling>1</rugzakleerling>
+					<gezinsstimuleringsproject>1</gezinsstimuleringsproject>
+					<opleiding_ouders>4</opleiding_ouders>
+					<asielzoeker>0</asielzoeker>
+					<thuistaal>1</thuistaal>
+					<taalgroep>4</taalgroep>
+					<instroomwijze>1</instroomwijze>
+					<kinderdagverblijf>false</kinderdagverblijf>
+					<uitstroomreden>1</uitstroomreden>
+					<adviesvo>23</adviesvo>
+					<lwooindicatie>1</lwooindicatie>
+				</blok>
+			</toevoegingen>
+		</leerling>
+	</leerlingen>
+</EDEX>

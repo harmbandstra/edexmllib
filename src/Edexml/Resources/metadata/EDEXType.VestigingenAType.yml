@@ -1,0 +1,13 @@
+Edexml\Types\EDEXType\VestigingenAType:
+    properties:
+        vestiging:
+            expose: true
+            access_type: public_method
+            serialized_name: vestiging
+            accessor:
+                getter: getVestiging
+                setter: setVestiging
+            xml_list:
+                inline: true
+                entry_name: vestiging
+            type: array<Edexml\Types\VestigingType>

@@ -1,0 +1,35 @@
+Edexml\Types\VestigingType:
+    properties:
+        key:
+            expose: true
+            access_type: public_method
+            serialized_name: key
+            accessor:
+                getter: getKey
+                setter: setKey
+            xml_attribute: true
+            type: string
+        naam:
+            expose: true
+            access_type: public_method
+            serialized_name: naam
+            accessor:
+                getter: getNaam
+                setter: setNaam
+            type: string
+        omschrijving:
+            expose: true
+            access_type: public_method
+            serialized_name: omschrijving
+            accessor:
+                getter: getOmschrijving
+                setter: setOmschrijving
+            type: string
+        mutatiedatum:
+            expose: true
+            access_type: public_method
+            serialized_name: mutatiedatum
+            accessor:
+                getter: getMutatiedatum
+                setter: setMutatiedatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\DateTime

@@ -1,0 +1,18 @@
+Edexml\Types\ToevoegingsBlokType:
+    properties:
+        code:
+            expose: true
+            access_type: public_method
+            serialized_name: code
+            accessor:
+                getter: getCode
+                setter: setCode
+            type: string
+        omschrijving:
+            expose: true
+            access_type: public_method
+            serialized_name: omschrijving
+            accessor:
+                getter: getOmschrijving
+                setter: setOmschrijving
+            type: string

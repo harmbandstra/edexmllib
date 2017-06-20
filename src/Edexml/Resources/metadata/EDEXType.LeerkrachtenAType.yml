@@ -1,0 +1,13 @@
+Edexml\Types\EDEXType\LeerkrachtenAType:
+    properties:
+        leerkracht:
+            expose: true
+            access_type: public_method
+            serialized_name: leerkracht
+            accessor:
+                getter: getLeerkracht
+                setter: setLeerkracht
+            xml_list:
+                inline: true
+                entry_name: leerkracht
+            type: array<Edexml\Types\LeerkrachtType>

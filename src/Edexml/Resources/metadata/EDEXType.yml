@@ -1,0 +1,54 @@
+Edexml\Types\EDEXType:
+    properties:
+        school:
+            expose: true
+            access_type: public_method
+            serialized_name: school
+            accessor:
+                getter: getSchool
+                setter: setSchool
+            type: Edexml\Types\SchoolType
+        vestigingen:
+            expose: true
+            access_type: public_method
+            serialized_name: vestigingen
+            accessor:
+                getter: getVestigingen
+                setter: setVestigingen
+            type: array<Edexml\Types\VestigingType>
+            xml_list:
+                inline: false
+                entry_name: vestiging
+                skip_when_empty: true
+        groepen:
+            expose: true
+            access_type: public_method
+            serialized_name: groepen
+            accessor:
+                getter: getGroepen
+                setter: setGroepen
+            type: Edexml\Types\EDEXType\GroepenAType
+        leerlingen:
+            expose: true
+            access_type: public_method
+            serialized_name: leerlingen
+            accessor:
+                getter: getLeerlingen
+                setter: setLeerlingen
+            type: array<Edexml\Types\LeerlingType>
+            xml_list:
+                inline: false
+                entry_name: leerling
+                skip_when_empty: false
+        leerkrachten:
+            expose: true
+            access_type: public_method
+            serialized_name: leerkrachten
+            accessor:
+                getter: getLeerkrachten
+                setter: setLeerkrachten
+            type: array<Edexml\Types\LeerkrachtType>
+            xml_list:
+                inline: false
+                entry_name: leerkracht
+                skip_when_empty: true

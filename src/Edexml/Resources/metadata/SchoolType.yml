@@ -1,0 +1,94 @@
+Edexml\Types\SchoolType:
+    properties:
+        schooljaar:
+            expose: true
+            access_type: public_method
+            serialized_name: schooljaar
+            accessor:
+                getter: getSchooljaar
+                setter: setSchooljaar
+            type: string
+        peildatum:
+            expose: true
+            access_type: public_method
+            serialized_name: peildatum
+            accessor:
+                getter: getPeildatum
+                setter: setPeildatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\Date
+        brincode:
+            expose: true
+            access_type: public_method
+            serialized_name: brincode
+            accessor:
+                getter: getBrincode
+                setter: setBrincode
+            type: string
+        dependancecode:
+            expose: true
+            access_type: public_method
+            serialized_name: dependancecode
+            accessor:
+                getter: getDependancecode
+                setter: setDependancecode
+            type: string
+        schoolkey:
+            expose: true
+            access_type: public_method
+            serialized_name: schoolkey
+            accessor:
+                getter: getSchoolkey
+                setter: setSchoolkey
+            type: string
+        instellingsnummer:
+            expose: true
+            access_type: public_method
+            serialized_name: instellingsnummer
+            accessor:
+                getter: getInstellingsnummer
+                setter: setInstellingsnummer
+            type: string
+        aanmaakdatum:
+            expose: true
+            access_type: public_method
+            serialized_name: aanmaakdatum
+            accessor:
+                getter: getAanmaakdatum
+                setter: setAanmaakdatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\DateTime
+        auteur:
+            expose: true
+            access_type: public_method
+            serialized_name: auteur
+            accessor:
+                getter: getAuteur
+                setter: setAuteur
+            type: string
+        xsdversie:
+            expose: true
+            access_type: public_method
+            serialized_name: xsdversie
+            accessor:
+                getter: getXsdversie
+                setter: setXsdversie
+            type: string
+        commentaar:
+            expose: true
+            access_type: public_method
+            serialized_name: commentaar
+            accessor:
+                getter: getCommentaar
+                setter: setCommentaar
+            type: string
+        toevoegingen:
+            expose: true
+            access_type: public_method
+            serialized_name: toevoegingen
+            accessor:
+                getter: getToevoegingen
+                setter: setToevoegingen
+            type: array<Edexml\Types\ToevoegingsBlokType>
+            xml_list:
+                inline: false
+                entry_name: blok
+                skip_when_empty: true

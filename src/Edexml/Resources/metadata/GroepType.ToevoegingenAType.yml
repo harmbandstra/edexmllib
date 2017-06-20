@@ -1,0 +1,13 @@
+Edexml\Types\GroepType\ToevoegingenAType:
+    properties:
+        blok:
+            expose: true
+            access_type: public_method
+            serialized_name: blok
+            accessor:
+                getter: getBlok
+                setter: setBlok
+            xml_list:
+                inline: true
+                entry_name: blok
+            type: array<Edexml\Types\ToevoegingsBlokType>

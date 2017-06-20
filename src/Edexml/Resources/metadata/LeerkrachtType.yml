@@ -1,0 +1,117 @@
+Edexml\Types\LeerkrachtType:
+    properties:
+        key:
+            expose: true
+            access_type: public_method
+            serialized_name: key
+            accessor:
+                getter: getKey
+                setter: setKey
+            xml_attribute: true
+            type: string
+        achternaam:
+            expose: true
+            access_type: public_method
+            serialized_name: achternaam
+            accessor:
+                getter: getAchternaam
+                setter: setAchternaam
+            type: string
+        voorvoegsel:
+            expose: true
+            access_type: public_method
+            serialized_name: voorvoegsel
+            accessor:
+                getter: getVoorvoegsel
+                setter: setVoorvoegsel
+            type: string
+        voornamen:
+            expose: true
+            access_type: public_method
+            serialized_name: voornamen
+            accessor:
+                getter: getVoornamen
+                setter: setVoornamen
+            type: string
+        voorletters1:
+            expose: true
+            access_type: public_method
+            serialized_name: voorletters-1
+            accessor:
+                getter: getVoorletters1
+                setter: setVoorletters1
+            type: string
+        roepnaam:
+            expose: true
+            access_type: public_method
+            serialized_name: roepnaam
+            accessor:
+                getter: getRoepnaam
+                setter: setRoepnaam
+            type: string
+        gebruikersnaam:
+            expose: true
+            access_type: public_method
+            serialized_name: gebruikersnaam
+            accessor:
+                getter: getGebruikersnaam
+                setter: setGebruikersnaam
+            type: string
+        emailadres:
+            expose: true
+            access_type: public_method
+            serialized_name: emailadres
+            accessor:
+                getter: getEmailadres
+                setter: setEmailadres
+            type: string
+        rol:
+            expose: true
+            access_type: public_method
+            serialized_name: rol
+            accessor:
+                getter: getRol
+                setter: setRol
+            xml_list:
+                inline: true
+                entry_name: rol
+            type: array<string>
+        rolomschrijving:
+            expose: true
+            access_type: public_method
+            serialized_name: rolomschrijving
+            accessor:
+                getter: getRolomschrijving
+                setter: setRolomschrijving
+            xml_list:
+                inline: true
+                entry_name: rolomschrijving
+            type: array<string>
+        groepen:
+            expose: true
+            access_type: public_method
+            serialized_name: groepen
+            accessor:
+                getter: getGroepen
+                setter: setGroepen
+            type: Edexml\Types\LeerkrachtGroepenReferentieType
+        toevoegingen:
+            expose: true
+            access_type: public_method
+            serialized_name: toevoegingen
+            accessor:
+                getter: getToevoegingen
+                setter: setToevoegingen
+            type: array<Edexml\Types\ToevoegingsBlokType>
+            xml_list:
+                inline: false
+                entry_name: blok
+                skip_when_empty: true
+        mutatiedatum:
+            expose: true
+            access_type: public_method
+            serialized_name: mutatiedatum
+            accessor:
+                getter: getMutatiedatum
+                setter: setMutatiedatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\DateTime

@@ -1,0 +1,47 @@
+Edexml\Types\SamengesteldeGroepType:
+    properties:
+        key:
+            expose: true
+            access_type: public_method
+            serialized_name: key
+            accessor:
+                getter: getKey
+                setter: setKey
+            xml_attribute: true
+            type: string
+        naam:
+            expose: true
+            access_type: public_method
+            serialized_name: naam
+            accessor:
+                getter: getNaam
+                setter: setNaam
+            type: string
+        omschrijving:
+            expose: true
+            access_type: public_method
+            serialized_name: omschrijving
+            accessor:
+                getter: getOmschrijving
+                setter: setOmschrijving
+            type: string
+        toevoegingen:
+            expose: true
+            access_type: public_method
+            serialized_name: toevoegingen
+            accessor:
+                getter: getToevoegingen
+                setter: setToevoegingen
+            type: array<Edexml\Types\ToevoegingsBlokType>
+            xml_list:
+                inline: false
+                entry_name: blok
+                skip_when_empty: true
+        mutatiedatum:
+            expose: true
+            access_type: public_method
+            serialized_name: mutatiedatum
+            accessor:
+                getter: getMutatiedatum
+                setter: setMutatiedatum
+            type: GoetasWebservices\Xsd\XsdToPhp\XMLSchema\DateTime

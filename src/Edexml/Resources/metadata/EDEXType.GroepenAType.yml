@@ -1,0 +1,24 @@
+Edexml\Types\EDEXType\GroepenAType:
+    properties:
+        groep:
+            expose: true
+            access_type: public_method
+            serialized_name: groep
+            accessor:
+                getter: getGroep
+                setter: setGroep
+            xml_list:
+                inline: true
+                entry_name: groep
+            type: array<Edexml\Types\GroepType>
+        samengesteldeGroep:
+            expose: true
+            access_type: public_method
+            serialized_name: samengestelde_groep
+            accessor:
+                getter: getSamengesteldeGroep
+                setter: setSamengesteldeGroep
+            xml_list:
+                inline: true
+                entry_name: samengestelde_groep
+            type: array<Edexml\Types\SamengesteldeGroepType>
