@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EDEX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EDEXML.structuur.xsd">
-	<school>
+	<school_incorrect_element>
 		<schooljaar>2014-2015</schooljaar>
 		<peildatum>2014-10-01</peildatum>
 		<brincode>99ZZ</brincode>
@@ -10,7 +10,7 @@
 		<auteur>Geert Evers</auteur>
 		<xsdversie>2.0</xsdversie>
 		<commentaar>Voorbeeld bij EDEXML schema versie 2.0</commentaar>
-	</school>
+	</school_incorrect_element>
 	<vestigingen>
 		<vestiging key="VH">
 			<naam>Vestiging Huissen</naam>

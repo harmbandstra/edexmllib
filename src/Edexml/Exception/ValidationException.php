@@ -1,6 +1,6 @@
 <?php
 
-namespace Edexml;
+namespace Edexml\Exception;
 
 use Throwable;
 

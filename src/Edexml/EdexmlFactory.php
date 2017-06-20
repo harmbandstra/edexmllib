@@ -2,6 +2,7 @@
 
 namespace Edexml;
 
+use Edexml\Exception\ValidationException;
 use Edexml\Types\EDEX;
 use GoetasWebservices\Xsd\XsdToPhpRuntime\Jms\Handler\BaseTypesHandler;
 use GoetasWebservices\Xsd\XsdToPhpRuntime\Jms\Handler\XmlSchemaDateHandler;
@@ -42,6 +43,11 @@ class EdexmlFactory
         return $object;
     }
 
+    /**
+     * @param string $xml
+     *
+     * @throws ValidationException
+     */
     public static function validate($xml)
     {
         libxml_use_internal_errors(true);

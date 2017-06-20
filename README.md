@@ -6,7 +6,7 @@ PHP Library for validating and importing [Edexml](https://www.edustandaard.nl/st
 
 Install with composer:
 
-$ composer require harmbandstra/edexmllib
+`$ composer require harmbandstra/edexmllib`
 
 # Development
 
