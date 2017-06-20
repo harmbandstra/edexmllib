@@ -10,8 +10,12 @@ Install with composer:
 
 # Development
 
-The library uses [xsd2php](https://github.com/goetas-webservices/xsd2php) for creating [JMS Serializer](http://jmsyst.com/libs/serializer) definition files. These files are used to deserialize the XML into PHP objects.
+The library uses [xsd2php](https://github.com/goetas-webservices/xsd2php) for creating [JMS Serializer](http://jmsyst.com/libs/serializer) definition files. These files are used to deserialize the XML into bite-sized PHP objects.
 
 ## Generate classes
 
-To generate new classed and JMS Serializer configuration based on the XSD files, run: `php vendor/bin/xsd2php convert config.yml src/xsd/*.xsd`
+To generate new classed and JMS Serializer configuration based on the XSD files, run: 
+
+`php vendor/bin/xsd2php convert config.yml src/xsd/*.xsd`
+
+This is only needed when the specification changes.

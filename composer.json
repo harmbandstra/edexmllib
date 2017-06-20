@@ -12,9 +12,7 @@
   "autoload": {
     "psr-4": {
       "Edexml\\": "src/"
-    },
-    "classmap": [
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {
