@@ -1,14 +1,19 @@
 {
   "name": "harmbandstra/edexmllib",
-  "license": "MIT",
-  "type": "project",
-  "description": "",
-  "authors": [
-    {
-      "name": "Harm Bandstra",
-      "email": "harm@bunq-it.nl"
-    }
+  "type": "library",
+  "description": "PHP Library for validating and importing Edexml files.",
+  "keywords": [
+    "edexml", "php", "library"
   ],
+  "license": "GPL-3.0",
+  "require": {
+    "php": ">=7.0",
+    "goetas-webservices/xsd2php-runtime": "^0.2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2",
+    "goetas-webservices/xsd2php": "^0.2.6"
+  },
   "autoload": {
     "psr-4": {
       "Edexml\\": "src/"
@@ -18,13 +23,5 @@
     "psr-4": {
       "Tests\\": "tests/"
     }
-  },
-  "require": {
-    "php": ">=7.0",
-    "goetas-webservices/xsd2php-runtime": "^0.2.2"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^6.2",
-    "goetas-webservices/xsd2php": "^0.2.6"
   }
 }
