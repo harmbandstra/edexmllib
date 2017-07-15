@@ -2,9 +2,9 @@ xsd2php:
   namespaces:
     '': 'Edexml\Types'
   destinations_php:
-    'Edexml\Types': src/Edexml/Types
+    'Edexml\Types': src/Types
   destinations_jms:
-    'Edexml\Types': src/metadata
+    'Edexml\Types': src/Resources/metadata
 #  aliases: # optional
 #    'http://www.example.org/test/':
 #      MyCustomXSDType:  'MyCustomMappedPHPType'

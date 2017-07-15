@@ -16,6 +16,6 @@ The library uses [xsd2php](https://github.com/goetas-webservices/xsd2php) for cr
 
 To generate new classed and JMS Serializer configuration based on the XSD files, run: 
 
-`php vendor/bin/xsd2php convert config.yml src/xsd/*.xsd`
+`php vendor/bin/xsd2php convert config.yml src/Resources/xsd/*.xsd`
 
 This is only needed when the specification changes.
