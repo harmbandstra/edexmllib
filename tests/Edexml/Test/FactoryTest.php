@@ -12,7 +12,7 @@ class FactoryTest extends TestCase
 {
     public function testLoadValidXml()
     {
-        $edex = EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.Voorbeeld.2.0.xml'));
+        $edex = EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.Voorbeeld.2.1.xml'));
         $this->assertInstanceOf(EDEX::class, $edex);
 
         /* School */
@@ -25,6 +25,11 @@ class FactoryTest extends TestCase
 
         /* Vestigingen */
         $this->assertEquals($this->getExpectedVestigingen(), $edex->getVestigingen());
+
+        /* Leerlingen */
+        $leerlingen = $edex->getLeerlingen();
+        $this->assertSame('https://id.school/LL_123467890abcdefghijklmnopqrstuvwxzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^_-', $leerlingen[0]->getEckid());
+        $this->assertNull($leerlingen[1]->getEckid());
     }
 
     public function testIfInvalidSchoolElementThrowsException()

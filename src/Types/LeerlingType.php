@@ -17,6 +17,11 @@ class LeerlingType
     private $key = null;
 
     /**
+     * @property string $eckid
+     */
+    private $eckid = null;
+
+    /**
      * @property string $achternaam
      */
     private $achternaam = null;
@@ -200,6 +205,28 @@ class LeerlingType
     public function setKey($key)
     {
         $this->key = $key;
+        return $this;
+    }
+
+    /**
+     * Gets as eckid
+     *
+     * @return string
+     */
+    public function getEckid()
+    {
+        return $this->eckid;
+    }
+
+    /**
+     * Sets a new eckid
+     *
+     * @param string $eckid
+     * @return self
+     */
+    public function setEckid($eckid)
+    {
+        $this->eckid = $eckid;
         return $this;
     }
 

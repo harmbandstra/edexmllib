@@ -9,6 +9,15 @@ Edexml\Types\LeerlingType:
                 setter: setKey
             xml_attribute: true
             type: string
+        eckid:
+            expose: true
+            access_type: public_method
+            serialized_name: eckid
+            accessor:
+                getter: getEckid
+                setter: setEckid
+            xml_attribute: true
+            type: string
         achternaam:
             expose: true
             access_type: public_method

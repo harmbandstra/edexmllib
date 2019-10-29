@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!--* Voorbeeld XML voor EDEXML 2.1
+    
+        EDEXML.Voorbeeld.2.1.xml (versie 2017-02-17)
+        
+        Wijzigingshistorie:
+        20170217: eerste versie voor EDEXML v2.1 met eckid en rol "TAL".
+        20151110: eerste versie voor EDEXML v2.0.
+	-->
+<!-- ================================================================== -->
+<!-- -->
 <EDEX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EDEXML.structuur.xsd">
-	<school_incorrect_element>
+	<school>
 		<schooljaar>2014-2015</schooljaar>
 		<peildatum>2014-10-01</peildatum>
 		<brincode>99ZZ</brincode>
@@ -10,7 +21,7 @@
 		<auteur>Geert Evers</auteur>
 		<xsdversie>2.1</xsdversie>
 		<commentaar>Voorbeeld bij EDEXML schema versie 2.1</commentaar>
-	</school_incorrect_element>
+	</school>
 	<vestigingen>
 		<vestiging key="VH">
 			<naam>Vestiging Huissen</naam>

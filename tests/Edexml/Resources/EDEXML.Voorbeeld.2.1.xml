@@ -8,8 +8,8 @@
 		<schoolkey>41323</schoolkey>
 		<aanmaakdatum>2014-11-25T14:33:33</aanmaakdatum>
 		<auteur>Geert Evers</auteur>
-		<xsdversie>2.0</xsdversie>
-		<commentaar>Voorbeeld bij EDEXML schema versie 2.0</commentaar>
+		<xsdversie>2.1</xsdversie>
+		<commentaar>Voorbeeld bij EDEXML schema versie 2.1</commentaar>
 	</school>
 	<vestigingen>
 		<vestiging key="VH">
@@ -63,11 +63,12 @@
 		</samengestelde_groep>
 	</groepen>
 	<leerlingen>
-		<leerling key="00001">
+		<leerling key="00001" eckid="https://id.school/LL_123467890abcdefghijklmnopqrstuvwxzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^_-">
 			<roepnaam>Wimpie</roepnaam>
 			<geboortedatum>2006-06-21</geboortedatum>
 			<geslacht>1</geslacht>
 			<start_ondw_jgr3>2013-08-16</start_ondw_jgr3>
+			<jaargroep>4</jaargroep>
 			<groep key="GRP4B"/>
 			<samengestelde_groepen>
 				<samengestelde_groep key="sg1"/>
@@ -97,6 +98,7 @@
 			<roepnaam>Gradje</roepnaam>
 			<geboortedatum>2006-06-21</geboortedatum>
 			<geslacht>1</geslacht>
+			<jaargroep>H</jaargroep>
 			<land>NL</land>
 			<land_vader>NL</land_vader>
 			<land_moeder>NL</land_moeder>
@@ -117,15 +119,16 @@
 		</leerling>
 	</leerlingen>
 	<leerkrachten>
-		<leerkracht key="LK1">
+		<leerkracht key="LK1" eckid="https://id.school/LK_abcdefghijklmnopqrstuvwxzABCDEFGHIJKLMNOPQRSTUVWXYZ123467890!@#$%^_-">
 			<achternaam>Bemmel</achternaam>
 			<voorvoegsel>van</voorvoegsel>
 			<voorletters-1>J</voorletters-1>
+			<rol>TAL</rol>
 			<groepen>
 				<groep key="GRP4A"/>
 			</groepen>
 		</leerkracht>
-		<leerkracht key="LK2">
+		<leerkracht key="LK2" eckid="https://id.school/abcde">
 			<achternaam>Veldman</achternaam>
 			<voorletters-1>UGH</voorletters-1>
 			<roepnaam>Uilke</roepnaam>
