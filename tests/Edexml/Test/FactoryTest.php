@@ -1,6 +1,6 @@
 <?php
 
-namespace Edexml\Test;
+namespace Tests\Edexml\Test;
 
 use Edexml\EdexmlFactory;
 use Edexml\Exception\ValidationException;
@@ -37,6 +37,30 @@ class FactoryTest extends TestCase
         $this->expectException(ValidationException::class);
         $this->expectExceptionMessage('Validation failed.');
         EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_1.xml'));
+    }
+
+    public function testItThrowsExceptionOnInvalidToevoegingen()
+    {
+        $this->expectException(ValidationException::class);
+        $this->expectExceptionMessage('Validation failed.');
+        EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_toevoegingen.xml'));
+    }
+
+    public function testItPassesValidationWhenStrippingInvalidToevoegingen()
+    {
+        $edex = EdexmlFactory::load(
+            EdexmlFactory::stripToevoegingen(
+                file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_toevoegingen.xml')
+            )
+        );
+        $this->assertInstanceOf(EDEX::class, $edex);
+    }
+
+    public function testItThrowsExceptionOnInvalidXml()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Unable to load supplied XML.');
+        EdexmlFactory::stripToevoegingen('This is not an XML');
     }
 
     /**

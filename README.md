@@ -27,6 +27,21 @@ Install with composer:
     }
 ```
 
+If the Edexml file contains <blok> elements with a type defined in a non-public XSD, you can strip the <toevoegingen>
+block before loading the XML.
+
+```php
+    $xml = file_get_contents('path_to_file');
+    try {
+        $edex = EdexmlFactory::load(
+            EdexmlFactory::stripToevoegingen($xml)
+        );
+    } catch (ValidationException $exception) {
+        // Handle exception
+    }
+
+```
+
 # Development
 
 The library uses [xsd2php](https://github.com/goetas-webservices/xsd2php) for creating [JMS Serializer](http://jmsyst.com/libs/serializer) definition files. These files are used to deserialize the XML into bite-sized PHP objects.

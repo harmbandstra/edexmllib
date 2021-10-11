@@ -17,6 +17,8 @@ class EdexmlFactory
     const SCHEMA = __DIR__ . '/Resources/xsd/EDEXML.structuur.xsd';
     const METADATA = __DIR__ . '/Resources/metadata';
 
+    const TAG_NAME_TOEVOEGINGEN = 'toevoegingen';
+
     /** @var Serializer */
     private static $serializer;
 
@@ -62,6 +64,44 @@ class EdexmlFactory
 
             throw $exception;
         }
+    }
+
+    /**
+     * Some suppliers do not add a proper XSD URI for a custom <blok> element under <toevoegingen>. This will cause the
+     * validation to fail.
+     *
+     * If you do not need the data contained within this element, you can preprocess the XML data with this method.
+     * All <toevoegingen> elements will be stripped from the XML.
+     *
+     * @param string $xml
+     *
+     * @return string
+     */
+    public static function stripToevoegingen($xml)
+    {
+        $dom = new \DOMDocument();
+        $loaded = $dom->loadXML($xml);
+        if ($loaded === false) {
+            throw new \InvalidArgumentException('Unable to load supplied XML.');
+        }
+
+        $domNodeList = $dom->getElementsByTagName(self::TAG_NAME_TOEVOEGINGEN);
+
+        $elementsToRemove = [];
+        foreach ($domNodeList as $domElement) {
+            $elementsToRemove[] = $domElement;
+        }
+
+        foreach ($elementsToRemove as $domElement) {
+            $domElement->parentNode->removeChild($domElement);
+        }
+
+        $result = $dom->saveXML();
+        if ($result === false) {
+            throw new \InvalidArgumentException('An error occurred while stripping elements.');
+        }
+
+        return $result;
     }
 
     private static function initSerializer()

@@ -8,6 +8,8 @@
   "license": "GPL-3.0",
   "require": {
     "php": ">=7.0",
+    "ext-dom": "*",
+    "ext-libxml": "*",
     "goetas-webservices/xsd2php-runtime": "^0.2.2"
   },
   "require-dev": {
