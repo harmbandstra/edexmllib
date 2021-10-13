@@ -3,6 +3,7 @@
 namespace Tests\Edexml\Test;
 
 use Edexml\EdexmlFactory;
+use Edexml\Exception\LoadXmlException;
 use Edexml\Exception\ValidationException;
 use Edexml\Types\EDEX;
 use Edexml\Types\VestigingType;
@@ -35,14 +36,14 @@ class FactoryTest extends TestCase
     public function testIfInvalidSchoolElementThrowsException()
     {
         $this->expectException(ValidationException::class);
-        $this->expectExceptionMessage('Validation failed.');
+        $this->expectExceptionMessage('Validation of XML failed.');
         EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_1.xml'));
     }
 
     public function testItThrowsExceptionOnInvalidToevoegingen()
     {
         $this->expectException(ValidationException::class);
-        $this->expectExceptionMessage('Validation failed.');
+        $this->expectExceptionMessage('Validation of XML failed.');
         EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_toevoegingen.xml'));
     }
 
@@ -56,11 +57,18 @@ class FactoryTest extends TestCase
         $this->assertInstanceOf(EDEX::class, $edex);
     }
 
-    public function testItThrowsExceptionOnInvalidXml()
+    public function testItThrowsExceptionWhenStrippingInvalidXml()
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(LoadXmlException::class);
         $this->expectExceptionMessage('Unable to load supplied XML.');
         EdexmlFactory::stripToevoegingen('This is not an XML');
+    }
+
+    public function testItThrowsExceptionWhenValidatingInvalidXml()
+    {
+        $this->expectException(LoadXmlException::class);
+        $this->expectExceptionMessage('Unable to load supplied XML.');
+        EdexmlFactory::validate('This is not an XML');
     }
 
     /**

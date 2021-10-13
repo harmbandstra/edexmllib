@@ -2,6 +2,7 @@
 
 namespace Edexml;
 
+use Edexml\Exception\LoadXmlException;
 use Edexml\Exception\ValidationException;
 use Edexml\Types\EDEX;
 use GoetasWebservices\Xsd\XsdToPhpRuntime\Jms\Handler\BaseTypesHandler;
@@ -48,14 +49,13 @@ class EdexmlFactory
     /**
      * @param string $xml
      *
-     * @throws ValidationException
+     * @throws LoadXmlException|ValidationException
      */
     public static function validate($xml)
     {
-        libxml_use_internal_errors(true);
+        $dom = self::createDomDocumentFromXml($xml);
 
-        $dom = new \DOMDocument();
-        $dom->loadXml($xml);
+        libxml_use_internal_errors(true);
         if (!$dom->schemaValidate(self::SCHEMA)) {
             $exception = new ValidationException();
             $errors = libxml_get_errors();
@@ -76,15 +76,12 @@ class EdexmlFactory
      * @param string $xml
      *
      * @return string
+     *
+     * @throws LoadXmlException|\InvalidArgumentException
      */
     public static function stripToevoegingen($xml)
     {
-        $dom = new \DOMDocument();
-        $loaded = $dom->loadXML($xml);
-        if ($loaded === false) {
-            throw new \InvalidArgumentException('Unable to load supplied XML.');
-        }
-
+        $dom = self::createDomDocumentFromXml($xml);
         $domNodeList = $dom->getElementsByTagName(self::TAG_NAME_TOEVOEGINGEN);
 
         $elementsToRemove = [];
@@ -102,6 +99,31 @@ class EdexmlFactory
         }
 
         return $result;
+    }
+
+    /**
+     * @param string $xml
+     *
+     * @return \DOMDocument
+     *
+     * @throws LoadXmlException
+     */
+    private static function createDomDocumentFromXml($xml)
+    {
+        libxml_use_internal_errors(true);
+
+        $dom = new \DOMDocument();
+        $dom->loadXml($xml);
+        if (!$dom->loadXml($xml)) {
+            $exception = new LoadXmlException();
+            $errors = libxml_get_errors();
+            $exception->setErrors($errors);
+            libxml_clear_errors();
+
+            throw $exception;
+        }
+
+        return $dom;
     }
 
     private static function initSerializer()
