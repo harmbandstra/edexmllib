@@ -29,16 +29,19 @@ class EdexmlFactory
 
     /**
      * @param string $xml
+     * @param bool $strict
      *
      * @return EDEX
      */
-    public static function load($xml)
+    public static function load($xml, $strict = true)
     {
         if (!self::$serializer instanceof Serializer) {
             self::initSerializer();
         }
 
-        self::validate($xml);
+        if ($strict) {
+            self::validate($xml);
+        }
 
         /** @var EDEX $object */
         $object = self::$serializer->deserialize($xml, 'Edexml\Types\EDEX', 'xml');

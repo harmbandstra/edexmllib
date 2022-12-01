@@ -33,6 +33,12 @@ class FactoryTest extends TestCase
         $this->assertNull($leerlingen[1]->getEckid());
     }
 
+    public function testLoadInvalidXmlWithoutStrictCheck()
+    {
+        $edex = EdexmlFactory::load(file_get_contents(__DIR__ . '/../Resources/EDEXML.invalid_1.xml'), false);
+        $this->assertInstanceOf(EDEX::class, $edex);
+    }
+
     public function testIfInvalidSchoolElementThrowsException()
     {
         $this->expectException(ValidationException::class);

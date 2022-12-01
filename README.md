@@ -42,6 +42,13 @@ block before loading the XML.
 
 ```
 
+To skip validation, set strict to `false`
+
+```php
+    $xml = file_get_contents('path_to_file');
+    $edex = EdexmlFactory::load($xml, false);
+```
+
 # Development
 
 The library uses [xsd2php](https://github.com/goetas-webservices/xsd2php) for creating [JMS Serializer](http://jmsyst.com/libs/serializer) definition files. These files are used to deserialize the XML into bite-sized PHP objects.
